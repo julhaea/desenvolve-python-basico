@@ -1,0 +1,7 @@
+1-Início 
+2-Leia n
+3-digito1 = n-1
+3-digito2 = 10-n
+3-R = (digito1*10) + digito 2
+4-Imprima R
+5-Fim

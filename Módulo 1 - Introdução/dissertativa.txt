@@ -1,0 +1,6 @@
+1-Leia e armazene o número n que deve ser multiplicado por 9 #entrada
+2-Subtraia n-1 e armazene como digito1 #processamento
+3-Subtraia 10-n e aramazene como digito2 #processamento
+4-Some digito1 e digito2 #processamento
+5-Mutiplique digito1 por 10 e some ao digito 2 e aramazene como resultado #processamento
+6-Apresente resultado e encerre o programa #saída
