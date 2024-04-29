@@ -8,4 +8,4 @@ if dist > 300:
     valor = peso*2
 if peso > 10:
     valor = valor + 10
-print(valor)
+print(f"O valor do frete é R${valor}")
