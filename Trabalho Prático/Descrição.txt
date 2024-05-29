@@ -1,0 +1,25 @@
+ O sistema foi criado para uma escola, e é usado por alunos e professores. No sistema os alunos podem enviar ou excluir atividades, ver atividades corrigidas e conferir suas notas, e os professores podem ver e corrigir atividades, ver e atualizar as notas dos alunos e criar novas contas (para alunos ou professores).
+    Obs: Os dados dos usuários e as notas dos alunos(boletim) estão em um arquivo csv e as atividades são arquivos txt.
+          
+        Funcionalidades do Aluno:
+
+            Enviar Atividades(C): a função abre uma página com duas caixas de textos que pedem o nome da atividade e o texto da atividade, no botão de envio outra função é chamada que cria um arquivo com o texto da atividade e nomeado com o nome da atividade e o nome do aluno logado. Se essa atividade já existir, ele receberá uma mensagem dizendo que ele já entregou.
+            
+            Excluir Atividades(D): a função abre uma página com uma caixa de texto que pede o nome da atividade, o botão "excluir" roda outra função que procura pela atividade que tem o nome da atividade e o nome do aluno logado e a exclui, se a função não encontrar a atividade o aluno recebe um aviso dizendo que a atividade ainda não foi entregue ou já foi corrigida.
+            
+            Ver atividade corrigida(R): a função abre uma baixa com uma caixa de texto que pede o nome da atividade, o botão "ver" chama a função que procura pela atividade que tem esse nome, o nome do aluno logado e o selo "CORRIGIDA", se a função só achar a atividade sem o selo, o aluno receberá uma mensagem dizendo que a atividade não foi corrigida ainda, mas se a função não achar nenhuma atividade com esse nome desse aluno ele receberá a mensagem dizendo que a atividade ainda não foi entregue.
+
+            Ver Notas(R): A função lê o arquivo do boletim e o tranforma em uma lista de listas. Dessa lista ela pega os nomes das materias e as respectivas notas do aluno logado, se alguma nota estiver nula no arquivo ela é substituída por "nota ainda não lançada", depois o aluno recebe uma mensagem com as suas notas.
+        
+        Funcionalidades do professor:
+
+            Ver e corrigir atividades(RU): Essa função abre uma página com três caixas de texto que pedem o nome da atividade, o nome do aluno e o texto da correção. O botão "ver atividade" chama uma função que procura a atividade desse aluno, se não encontrar a atividade o professor recebe uma mensagem dizendo que a atividade ainda não foi entregue, se encontra a atividade com o selo de "CORRIGIDA" o professor recebe uma mensagem dizendo que a atividade já foi corrigida. Se a função encontrar a atividade ela abre o arquivo da atividade. O botão "corrigir" pega o texto da correção e adiciona ao final da atividade com a assinatura do professor que corigiu.
+
+            Ver notas(R): Essa função abre uma página com uma caixa de texto que pede o nome do aluno, o botão roda uma função que abre o boletim e pega os nomes das matérias e as notas desse aluno em cada uma delas e depois imprime em uma mensagem. Se o aluno não for achado, o professor é avisado.
+
+            Atualizar notas(U): Essa função abre uma página com duas caixas de texto que pedem o nome do aluno e o nome da materia, o botão chama a função que lê o boletim e o transforma em uma lista de listas. Depois, a partir dessa lista ela e pega o indice da materia e do aluno e os combina para chegar ao indice céula que deve ser alterada. A célula da lista é alterada e o contéudo do boletim inicial é substituído pelo contéudo da lista atualizada. Se o aluno ou a materia não for encontrada o professor recebe um aviso.
+
+            Criar conta(U): Essa função abre uma página com três caixas de texto que pedem o nome do novo usuário, a senha e o tipo de conta. O botão criar conta roda uma função que confere se o nome de usuário está disponível e se o tipo de conta é válido(aluno ou professor), se tudo estiver correto ele adiciona mais uma linha à tabela de usuários com o nome, senha e tipo da conta. Se o tipo for aluno a função já cria uma nova linha no boletim com o nome do aluno e todas as notas nulas.
+
+
+Com mais tempo disponível eu faria uma interface melhor, colocaria todas as páginas para abrirem em uma única janela (no sistema cada função abre uma nova janela), faria outros tipos de conta com permissões diferentes e colocaria funções para postar e acessar aulas.
